@@ -1,9 +1,9 @@
-=== WordPress Dashboard Twitter ===
+﻿=== WordPress Dashboard Twitter ===
 Contributors: Alphawolf, ratterobert
 Donate link: http://www.schloebe.de/donate/
 Tags: twitter, tweet, wordpress, dashboard, widget, bitly, wpgd, shortener, oauth, retweet, timeline
 Requires at least: 2.7
-Tested up to: 3.9
+Tested up to: 4.4.999
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,6 +17,8 @@ Twitter is everywhere. So why not in your WordPress Dashboard? WordPress Dashboa
 The Dashboard widget lets you update your status, send direct messages, follow your mentions and retweets, list direct messages, sent messages, your friends timeline and your favorites in a simple tab interface. All in a single widget. No seperate admin page needed. All the Twitter stuff you need right *where* you need it.
 
 [Developer on Google+](https://plus.google.com/118074611982254715031 "Developer on Google+") | [Developer on Twitter](http://twitter.com/wpseek "Developer on Twitter")
+
+[Become A Patron, Support The Developer.](http://www.patreon.com/oliver_schloebe "Become A Patron, Support The Developer.")
 
 **Looking for more WordPress plugins? Visit [www.schloebe.de/portfolio/](http://www.schloebe.de/portfolio/)**
 
@@ -33,8 +35,7 @@ The Dashboard widget lets you update your status, send direct messages, follow y
 * No dedicated page in your WordPress admin panel
 * All customization can be done through the Widget’s Configuration
 * No impact on your blog’s frontend or other backend pages
-* Shortening URLs with **wp.gd (new!)** or bit.ly
-* One-Click-Image-Upload for TwitPic (currently disabled since version 1.0)
+* Shortening URLs bit.ly
 * Whenever you check your incoming links or WordPress News in the Dashboard, you can check your Twitter status as well
 
 **Included languages:**
@@ -66,6 +67,9 @@ Please visit [the official website](http://wpdashboardtwitter.com/ "WordPress Da
 4. Installation finished.
 
 == Changelog ==
+
+= 1.1.13 =
+* FIXED: Issue caused by code minification
 
 = 1.1.11 =
 * FIXED: 'Redefining already defined constructor' bug that occured on several configurations
