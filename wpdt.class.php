@@ -9,7 +9,7 @@
 /**
  * Define the plugin version
  */
-define("WPDT_VERSION", "1.1.13");
+define("WPDT_VERSION", "1.1.20");
 
 /**
  * Define the global var WPDTISWP27, returning bool if at least WP 2.7 is running

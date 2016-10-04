@@ -39,7 +39,9 @@ function wpdt_load_replies( $ajaxCall ) {
 			
 			$replyoutput .= '<li id="wpdtreply-' . $replies->id . '"><div class="comment-item wpdt-reply-item">';
 			if( $options['show_avatars'] )
-				$replyoutput .= '<div class="avatar"><img src="' . urldecode( $replies->user->profile_image_url ) . '" border="0" width="48" height="48" alt="" /></div>';
+				$replyoutput .= '<div class="avatar"><img src="' . wpdt_get_twitter_profile_img_url( $replies->user ) . '" border="0" width="48" height="48" alt="" /></div>';
+			
+			#$replyoutput .= "<pre style='text-align:left; background-color:#ffffff; color:#333333;'>".print_r($replies,true)."</pre>";
 				
 			$replyoutput .= '<h4 class="wpdt-sender comment-meta">' . __( 'From', 'wp-dashboard-twitter' ) . ' <a href="http://twitter.com/' . urldecode( $replies->user->screen_name ) . '" class="url">' . WPDashboardTwitter_Helper::esc_html( $replies->user->screen_name ) . '</a> | <a href="' . urldecode( $replyurl ) . '" replytoname="' . $replies->user->screen_name . '" onclick="WPDashboardTwitter.reply(this, 0, ' . $replies->id . '); return false;" class="meta-reply" title="' . WPDashboardTwitter_Helper::esc_attr( __('Reply to a user', 'wp-dashboard-twitter') ) . '"><img src="' . WPDashboardTwitter_Helper::plugins_url('img/reply.png', __FILE__) . '" border="0" alt="' . WPDashboardTwitter_Helper::esc_attr( __('Reply', 'wp-dashboard-twitter') ) . '" /></a> <a href="#" onclick="WPDashboardTwitter.reply(this, 2, ' . $replies->id . '); return false;" title="' . WPDashboardTwitter_Helper::esc_attr( __('Retweet this message', 'wp-dashboard-twitter') ) . '"><img src="' . WPDashboardTwitter_Helper::plugins_url('img/retweet.png', __FILE__) . '" border="0" alt="' . WPDashboardTwitter_Helper::esc_attr( __('Retweet this message', 'wp-dashboard-twitter') ) . '" /></a></h4>';
 			$replyoutput .= '<blockquote class="wpdt-text"><p>' . $replytext . '</p></blockquote>';
@@ -89,7 +91,7 @@ function wpdt_load_timeline( $ajaxCall ) {
 			$timelineurl = sprintf('http://twitter.com/home?status=@%s &in_reply_to_status_id=%s&in_reply_to=%s', $timeline->user->name, $timeline->id, $timeline->user->name);	
 			$timelineoutput .= '<li id="wpdttimeline-' . $timeline->id . '"><div class="comment-item wpdt-reply-item">';
 			if( $options['show_avatars'] )
-				$timelineoutput .= '<div class="avatar"><img src="' . urldecode( $timeline->user->profile_image_url ) . '" border="0" width="48" height="48" alt="" /></div>';	
+				$timelineoutput .= '<div class="avatar"><img src="' . wpdt_get_twitter_profile_img_url( $timeline->user ) . '" border="0" width="48" height="48" alt="" /></div>';	
 			$timelineoutput .= '<h4 class="wpdt-sender comment-meta">' . __( 'From', 'wp-dashboard-twitter' ) . ' <a href="http://twitter.com/' . urldecode( $timeline->user->screen_name ) . '" class="url">' . WPDashboardTwitter_Helper::esc_html( $timeline->user->screen_name ) . '</a> | <a href="' . urldecode( $timelineurl ) . '" replytoname="' . $timeline->user->screen_name . '" onclick="WPDashboardTwitter.reply(this, 0, ' . $timeline->id . '); return false;" class="meta-reply" title="' . WPDashboardTwitter_Helper::esc_attr( __('Reply to a user', 'wp-dashboard-twitter') ) . '"><img src="' . WPDashboardTwitter_Helper::plugins_url('img/reply.png', __FILE__) . '" border="0" alt="' . WPDashboardTwitter_Helper::esc_attr( __('Reply', 'wp-dashboard-twitter') ) . '" /></a> <a href="#" onclick="WPDashboardTwitter.reply(this, 2, ' . $timeline->id . '); return false;" title="' . WPDashboardTwitter_Helper::esc_attr( __('Retweet this message', 'wp-dashboard-twitter') ) . '"><img src="' . WPDashboardTwitter_Helper::plugins_url('img/retweet.png', __FILE__) . '" border="0" alt="' . WPDashboardTwitter_Helper::esc_attr( __('Retweet this message', 'wp-dashboard-twitter') ) . '" /></a></h4>';
 			$timelineoutput .= '<blockquote class="wpdt-text"><p>' . $timelinetext . '</p></blockquote>';
 			$timelineoutput .= '<div class="wpdt-meta">';
@@ -139,7 +141,7 @@ function wpdt_load_direct_messages( $ajaxCall ) {
 			$directtext = WPDashboardTwitter::hyperlinkit( WPDashboardTwitter_Helper::esc_js( $messages->text ) );
 			$directoutput .= '<li id="wpdtdm-' . $messages->id . '"><div class="comment-item wpdt-dm-item">';
 			if( $options['show_avatars'] )
-				$directoutput .= '<div class="avatar"><img src="' . urldecode( $messages->sender->profile_image_url ) . '" width="48" height="48" border="0" alt="" /></div>';	
+				$directoutput .= '<div class="avatar"><img src="' . wpdt_get_twitter_profile_img_url( $messages->sender ) . '" width="48" height="48" border="0" alt="" /></div>';	
 			$directoutput .= '<h4 class="wpdt-sender">' . __( 'From', 'wp-dashboard-twitter' ) . ' <a href="http://twitter.com/' . urlencode( $messages->sender_screen_name ) . '" class="url">' . WPDashboardTwitter_Helper::esc_html( $messages->sender_screen_name ) . '</a></h4>';
 			$directoutput .= '<blockquote class="wpdt-text"><p>' . $directtext . '</p></blockquote>';
 			$directoutput .= '<p class="row-actions"><a href="#" replytoname="' . $messages->sender_screen_name . '" onclick="WPDashboardTwitter.reply(this, 1, ' . $messages->id . '); return false;" class="meta-reply" title="' . WPDashboardTwitter_Helper::esc_attr( sprintf(__('Compose a new Direct Message to %s', 'wp-dashboard-twitter'), $messages->sender_screen_name) ) . '">' . __('Reply', 'wp-dashboard-twitter') . '</a></p>';
@@ -189,7 +191,7 @@ function wpdt_load_sent_messages( $ajaxCall ) {
 			$senttext = WPDashboardTwitter::hyperlinkit( WPDashboardTwitter_Helper::esc_js( $sent->text ) );
 			$sentoutput .= '<li>';
 			if( $options['show_avatars'] )
-				$sentoutput .= '<div class="avatar"><img src="' . urldecode( $usr->profile_image_url ) . '" width="48" height="48" border="0" alt="" /></div>';	
+				$sentoutput .= '<div class="avatar"><img src="' . wpdt_get_twitter_profile_img_url( $usr ) . '" width="48" height="48" border="0" alt="" /></div>';	
 			$sentoutput .= '<h4 class="wpdt-sender">' . __( 'From', 'wp-dashboard-twitter' ) . ' <a href="http://twitter.com/' . urlencode( $sent->user->screen_name ) . '" class="url">' . WPDashboardTwitter_Helper::esc_html( $sent->user->screen_name ) . '</a> ';
 			if( !empty( $sent->in_reply_to_screen_name ) )
 				$sentoutput .= __( 'to', 'wp-dashboard-twitter' ) . ' <a href="http://twitter.com/' . urlencode( $sent->in_reply_to_screen_name ) . '" class="url">' . WPDashboardTwitter_Helper::esc_html( $sent->in_reply_to_screen_name ) . '</a>';	
@@ -241,7 +243,7 @@ function wpdt_load_favorites( $ajaxCall ) {
 			$favoritestext = WPDashboardTwitter::hyperlinkit( WPDashboardTwitter_Helper::esc_js( $favorite->text ) );
 			$favoritesoutput .= '<li>';
 			if( $options['show_avatars'] )
-				$favoritesoutput .= '<div class="avatar"><img src="' . urldecode( $favorite->user->profile_image_url ) . '" width="48" height="48" border="0" alt="" /></div>';	
+				$favoritesoutput .= '<div class="avatar"><img src="' . wpdt_get_twitter_profile_img_url( $favorite->user ) . '" width="48" height="48" border="0" alt="" /></div>';	
 			$favoritesoutput .= '<h4 class="wpdt-sender">' . sprintf(__( 'By %s' ), '<a href="http://twitter.com/' . urlencode( $favorite->user->screen_name ) . '" class="url">' . WPDashboardTwitter_Helper::esc_html( $favorite->user->screen_name ) . '</a>') . '</h4>';
 			$favoritesoutput .= '<blockquote class="wpdt-text"><p>' . $favoritestext . '</p></blockquote>';
 			$favoritesoutput .= '<div class="wpdt-meta">';
@@ -284,7 +286,7 @@ function wpdt_load_retweets( $ajaxCall ) {
 			$retweetstext = WPDashboardTwitter::hyperlinkit( WPDashboardTwitter_Helper::esc_js( $retweet->text ) );
 			$retweetsoutput .= '<li>';
 			if( $options['show_avatars'] )
-				$retweetsoutput .= '<div class="avatar"><img src="' . urldecode( $retweet->user->profile_image_url ) . '" width="48" height="48" border="0" alt="" /></div>';	
+				$retweetsoutput .= '<div class="avatar"><img src="' . wpdt_get_twitter_profile_img_url( $retweet->user ) . '" width="48" height="48" border="0" alt="" /></div>';	
 			$retweetsoutput .= '<h4 class="wpdt-sender">' . sprintf(__( 'By %s' ), '<a href="http://twitter.com/' . urlencode( $retweet->user->screen_name ) . '" class="url">' . WPDashboardTwitter_Helper::esc_html( $retweet->user->screen_name ) . '</a>') . '</h4>';
 			$retweetsoutput .= '<blockquote class="wpdt-text"><p>' . $retweetstext . '</p></blockquote>';
 			$retweetsoutput .= '<div class="wpdt-meta">';
@@ -396,5 +398,23 @@ function wpdt_shorten_imgurl( $ajaxCall ) {
 		die( "alert('TwitPic: " . $twitpic_data->err['msg'] . "');" );
 	else
 		die( "jQuery('#wpdt-txtarea').val(jQuery('#wpdt-txtarea').val() + ' " . $twitpic_data->mediaurl . "');" );
+}
+
+
+/**
+* Grabs Twitter profile image url from API user object
+*
+* @since 		1.1.20
+* @param 		object $usr
+* @return 		string $url
+* @author 		scripts@schloebe.de
+*/
+function wpdt_get_twitter_profile_img_url( $usr ) {
+	$identifier = 'profile_image_url';
+	if ( is_ssl() ) {
+		$identifier .= '_https';
+	}
+	
+	return urldecode( $usr->$identifier );
 }
 ?>
