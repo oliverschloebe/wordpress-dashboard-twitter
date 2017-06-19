@@ -9,7 +9,7 @@
 /**
  * Define the plugin version
  */
-define("WPDT_VERSION", "1.1.20");
+define("WPDT_VERSION", "1.2.0");
 
 /**
  * Define the global var WPDTISWP27, returning bool if at least WP 2.7 is running
@@ -99,24 +99,6 @@ class WPDashboardTwitter {
 		add_action('wp_ajax_wpdt_shorten_imgurl', 'wpdt_shorten_imgurl' );
 		add_action('wp_ajax_wpdt_verify_credentials', 'wpdt_verify_credentials' );
 	}
-
-
-	/**
- 	* The WPDashboardTwitter class constructor
- 	* initializing required stuff for the plugin
- 	*
- 	* We don't really need this since the plugin requires
- 	* PHP5 to run, but well... ;-)
- 	*
-	* PHP 4 Compatible Constructor
- 	*
- 	* @since 		0.8
- 	* @author 		scripts@schloebe.de
- 	*/
-	function wpdashboardtwitter() {
-		$this->__construct();
-	}
-
 
 
 	/**
@@ -289,7 +271,7 @@ class WPDashboardTwitter {
 			unset($_SESSION['oauth_token']);
 			unset($_SESSION['oauth_token_secret']);
 		}	?>
-	<p>		<label for="items"><?php _e('How many items?', 'wp-dashboard-twitter'); ?></label>		<select id="items" name="items">			<option value="3"<?php echo ( $options['items'] == '3' ? " selected='selected'" : '' ) ?>>3</option>			<option value="5"<?php echo ( $options['items'] == '5' ? " selected='selected'" : '' ) ?>>5</option>			<option value="10"<?php echo ( $options['items'] == '10' ? " selected='selected'" : '' ) ?>>10</option>			<option value="15"<?php echo ( $options['items'] == '15' ? " selected='selected'" : '' ) ?>>15</option>		</select>	</p>	<p>		<label for="startup_tab"><?php _e('Tab to open by default', 'wp-dashboard-twitter'); ?></label>		<select id="startup_tab" name="startup_tab">			<option value="0"<?php echo ( $options['startup_tab'] == '0' ? " selected='selected'" : '' ) ?>><?php _e('Mentions', 'wp-dashboard-twitter'); ?></option>			<option value="1"<?php echo ( $options['startup_tab'] == '1' ? " selected='selected'" : '' ) ?>><?php _e('Direct', 'wp-dashboard-twitter'); ?></option>			<option value="2"<?php echo ( $options['startup_tab'] == '2' ? " selected='selected'" : '' ) ?>><?php _e('Sent', 'wp-dashboard-twitter'); ?></option>			<option value="3"<?php echo ( $options['startup_tab'] == '3' ? " selected='selected'" : '' ) ?>><?php _e('Favorites', 'wp-dashboard-twitter'); ?></option>			<option value="3"<?php echo ( $options['startup_tab'] == '4' ? " selected='selected'" : '' ) ?>><?php _e('Retweeted', 'wp-dashboard-twitter'); ?></option>			<option value="5"<?php echo ( $options['startup_tab'] == '5' ? " selected='selected'" : '' ) ?>><?php _e('Timeline', 'wp-dashboard-twitter'); ?></option>		</select>	</p>	<p>		<label for="url_service"><?php _e('URL Shortener', 'wp-dashboard-twitter'); ?></label>		<select id="url_service" name="url_service">			<!-- <option value="trim"<?php echo ( $options['url_service'] == 'trim' ? " selected='selected'" : '' ) ?>><?php _e('tr.im', 'wp-dashboard-twitter'); ?></option> -->			<option value="bitly"<?php echo ( $options['url_service'] == 'bitly' ? " selected='selected'" : '' ) ?>><?php _e('bit.ly', 'wp-dashboard-twitter'); ?></option>		</select>	</p>	<p>		<input id="show_avatars" name="show_avatars" type="checkbox" value="1"<?php		if (1 == $options['show_avatars'])			echo ' checked="checked"';		?> />		<label for="show_avatars"><?php _e('Show Avatars?', 'wp-dashboard-twitter'); ?></label>	</p>	<?php if( current_user_can( 'level_10' ) ) {	?>
+	<p>		<label for="items"><?php _e('How many items?', 'wp-dashboard-twitter'); ?></label>		<select id="items" name="items">			<option value="3"<?php echo ( $options['items'] == '3' ? " selected='selected'" : '' ) ?>>3</option>			<option value="5"<?php echo ( $options['items'] == '5' ? " selected='selected'" : '' ) ?>>5</option>			<option value="10"<?php echo ( $options['items'] == '10' ? " selected='selected'" : '' ) ?>>10</option>			<option value="15"<?php echo ( $options['items'] == '15' ? " selected='selected'" : '' ) ?>>15</option>		</select>	</p>	<p>		<label for="startup_tab"><?php _e('Tab to open by default', 'wp-dashboard-twitter'); ?></label>		<select id="startup_tab" name="startup_tab">			<option value="0"<?php echo ( $options['startup_tab'] == '0' ? " selected='selected'" : '' ) ?>><?php _e('Mentions', 'wp-dashboard-twitter'); ?></option>			<!-- <option value="1"<?php echo ( $options['startup_tab'] == '1' ? " selected='selected'" : '' ) ?>><?php _e('Direct', 'wp-dashboard-twitter'); ?></option>			<option value="2"<?php echo ( $options['startup_tab'] == '2' ? " selected='selected'" : '' ) ?>><?php _e('Sent', 'wp-dashboard-twitter'); ?></option> -->			<option value="3"<?php echo ( $options['startup_tab'] == '3' ? " selected='selected'" : '' ) ?>><?php _e('Favorites', 'wp-dashboard-twitter'); ?></option>			<option value="3"<?php echo ( $options['startup_tab'] == '4' ? " selected='selected'" : '' ) ?>><?php _e('Retweeted', 'wp-dashboard-twitter'); ?></option>			<option value="5"<?php echo ( $options['startup_tab'] == '5' ? " selected='selected'" : '' ) ?>><?php _e('Timeline', 'wp-dashboard-twitter'); ?></option>		</select>	</p>	<p>		<label for="url_service"><?php _e('URL Shortener', 'wp-dashboard-twitter'); ?></label>		<select id="url_service" name="url_service">			<!-- <option value="trim"<?php echo ( $options['url_service'] == 'trim' ? " selected='selected'" : '' ) ?>><?php _e('tr.im', 'wp-dashboard-twitter'); ?></option> -->			<option value="bitly"<?php echo ( $options['url_service'] == 'bitly' ? " selected='selected'" : '' ) ?>><?php _e('bit.ly', 'wp-dashboard-twitter'); ?></option>		</select>	</p>	<p>		<input id="show_avatars" name="show_avatars" type="checkbox" value="1"<?php		if (1 == $options['show_avatars'])			echo ' checked="checked"';		?> />		<label for="show_avatars"><?php _e('Show Avatars?', 'wp-dashboard-twitter'); ?></label>	</p>	<?php if( current_user_can( 'level_10' ) ) {	?>
 	<p>		<input id="access_everyone" name="access_everyone" type="checkbox" value="1"<?php		if (1 == $options['access_everyone'])			echo ' checked="checked"';		?> />		<label for="access_everyone"><?php _e('Make the Dashboard Widget accessible for everyone?', 'wp-dashboard-twitter'); ?></label>	</p>	<?php } ?>
 	<p>
 		<input id="compat_mode" name="compat_mode" type="checkbox" value="1"<?php
@@ -309,15 +291,10 @@ class WPDashboardTwitter {
 	* @author 		scripts@schloebe.de
 	*/
 	function hyperlinkit( $text ) {
-		// make URLs clickable
-		$text = make_clickable($text);
-		// #hashtags
-		#$hashtag_expr = "/(^|\s)#(\w*)/i";
-		$hashtag_expr = "/(^|\s)#([a-zA-ZÃ¶Ã¤Ã¼Ã–Ã„ÃœÃŸ_0-9]*)/i";
-		$hashtag_replace = "$1<a href=\"http://twitter.com/search?q=%23$2\" target=\"_blank\">#$2</a>";
-		$text = preg_replace($hashtag_expr, $hashtag_replace, $text);
-		// @mentions
-		$text = preg_replace('/([\.|\,|\:|\Â¡|\Â¿|\>|\{|\(]?)@{1}(\w*)([\.|\,|\:|\!|\?|\>|\}|\)]?)\s/i', "$1<a href=\"http://twitter.com/$2\" target=\"_blank\">@$2</a>$3 ", $text);
+		require_once WPDT_PLUGINFULLDIR . 'inc/Autolink.php';
+		
+		$text = \Twitter_Autolink::create($text)->setNoFollow(true)->setExternal(true)->addLinks();
+		
 		return $text;
 	}
 	/**

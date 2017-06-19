@@ -1,9 +1,9 @@
 ﻿=== WordPress Dashboard Twitter ===
 Contributors: Alphawolf, ratterobert
-Donate link: http://www.schloebe.de/donate/
+Donate link: https://www.schloebe.de/donate/
 Tags: twitter, tweet, wordpress, dashboard, widget, bitly, wpgd, shortener, oauth, retweet, timeline
 Requires at least: 2.7
-Tested up to: 4.6.999
+Tested up to: 4.8.999
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -20,7 +20,7 @@ The Dashboard widget lets you update your status, send direct messages, follow y
 
 [Become A Patron, Support The Developer.](http://www.patreon.com/oliver_schloebe "Become A Patron, Support The Developer.")
 
-**Looking for more WordPress plugins? Visit [www.schloebe.de/portfolio/](http://www.schloebe.de/portfolio/)**
+**Looking for more WordPress plugins? Visit [www.schloebe.de/portfolio/](https://www.schloebe.de/portfolio/)**
 
 [vimeo http://vimeo.com/5734274]
 
@@ -63,6 +63,16 @@ If you have suggestions please let us know by dropping us a line via e-mail or t
 4. Installation finished.
 
 == Changelog ==
+
+= 1.2.0 =
+* FIXED: Refined UI
+* FIXED: Improved info and links
+* FIXED: Improved auto-linking of hashtags, lists, usernames and external links
+* FIXED: Minor bugfixes
+
+= 1.1.21 =
+* FIXED: WordPress 4.7 compatibility
+* FIXED: PHP 7 compatibility
 
 = 1.1.20 =
 * FIXED: Issue with not serving Twitter profile images on SSL sites
