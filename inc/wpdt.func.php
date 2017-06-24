@@ -19,7 +19,8 @@ function wpdt_load_replies( $ajaxCall ) {
 	// security check
 	check_ajax_referer( 'wpdt_woelfi_nonce' );
 	
-	$options = WPDashboardTwitter::dashboard_widget_options();
+	$wpdt = new WPDashboardTwitter;
+	$options = $wpdt->dashboard_widget_options();
 	if( !class_exists('TwitterOAuth') )
 		require_once( dirname(__FILE__) . '/twitteroauth.php');
 	
@@ -73,7 +74,8 @@ function wpdt_load_timeline( $ajaxCall ) {
 	// security check
 	check_ajax_referer( 'wpdt_woelfi_nonce' );
 	
-	$options = WPDashboardTwitter::dashboard_widget_options();
+	$wpdt = new WPDashboardTwitter;
+	$options = $wpdt->dashboard_widget_options();
 	if( !class_exists('TwitterOAuth') )
 		require_once( dirname(__FILE__) . '/twitteroauth.php');
 	require_once( dirname(__FILE__) . '/config.php');
@@ -128,7 +130,9 @@ function wpdt_load_timeline( $ajaxCall ) {
 function wpdt_load_direct_messages( $ajaxCall ) {
 	// security check
 	check_ajax_referer( 'wpdt_woelfi_nonce' );
-	$options = WPDashboardTwitter::dashboard_widget_options();
+	
+	$wpdt = new WPDashboardTwitter;
+	$options = $wpdt->dashboard_widget_options();
 	if( !class_exists('TwitterOAuth') )
 		require_once( dirname(__FILE__) . '/twitteroauth.php');
 	require_once( dirname(__FILE__) . '/config.php');
@@ -178,7 +182,8 @@ function wpdt_load_sent_messages( $ajaxCall ) {
 	// security check
 	check_ajax_referer( 'wpdt_woelfi_nonce' );
 	
-	$options = WPDashboardTwitter::dashboard_widget_options();
+	$wpdt = new WPDashboardTwitter;
+	$options = $wpdt->dashboard_widget_options();
 	if( !class_exists('TwitterOAuth') )
 		require_once( dirname(__FILE__) . '/twitteroauth.php');
 	require_once( dirname(__FILE__) . '/config.php');
@@ -228,8 +233,9 @@ function wpdt_load_sent_messages( $ajaxCall ) {
 */
 function wpdt_load_favorites( $ajaxCall ) {
 	// security check
-	check_ajax_referer( 'wpdt_woelfi_nonce' );
-	$options = WPDashboardTwitter::dashboard_widget_options();
+	check_ajax_referer( 'wpdt_woelfi_nonce' );	
+	$wpdt = new WPDashboardTwitter;
+	$options = $wpdt->dashboard_widget_options();
 	if( !class_exists('TwitterOAuth') )
 		require_once( dirname(__FILE__) . '/twitteroauth.php');
 	require_once( dirname(__FILE__) . '/config.php');
@@ -282,7 +288,8 @@ function wpdt_load_retweets( $ajaxCall ) {
 	// security check
 	check_ajax_referer( 'wpdt_woelfi_nonce' );
 	
-	$options = WPDashboardTwitter::dashboard_widget_options();
+	$wpdt = new WPDashboardTwitter;
+	$options = $wpdt->dashboard_widget_options();
 	if( !class_exists('TwitterOAuth') )
 		require_once( dirname(__FILE__) . '/twitteroauth.php');
 	require_once( dirname(__FILE__) . '/config.php');
@@ -334,10 +341,11 @@ function wpdt_send_update( $ajaxCall ) {
 		$in_reply_to = '';
 	else
 		$in_reply_to = $_POST['in_reply_to_statusid'];
-	
-	$options = WPDashboardTwitter::dashboard_widget_options();
+		
 	require_once( dirname(__FILE__) . '/twitteroauth.php');
 	require_once( dirname(__FILE__) . '/config.php');
+	$wpdt = new WPDashboardTwitter;
+	$options = $wpdt->dashboard_widget_options();
 	$twitter = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $options['wpdt_oauth_token'], $options['wpdt_oauth_secret']);
 	$twitter->useragent = 'WordPress Dashboard Twitter';
 	$twitter->post('statuses/update', array('status' => stripslashes($_POST['status_text']), 'in_reply_to_status_id' => $in_reply_to));
@@ -353,8 +361,9 @@ function wpdt_send_update( $ajaxCall ) {
 */
 function wpdt_shorten_url( $ajaxCall ) {
 	// security check
-	check_ajax_referer( 'wpdt_woelfi_nonce' );
-	$options = WPDashboardTwitter::dashboard_widget_options();
+	check_ajax_referer( 'wpdt_woelfi_nonce' );	
+	$wpdt = new WPDashboardTwitter;
+	$options = $wpdt->dashboard_widget_options();
 	$shorteners = WPDashboardTwitter_Helper::get_url_shorteners();
 	$apiurl = $shorteners[$options['url_service']]['apiurl'];
 	$ch = curl_init();
@@ -390,8 +399,9 @@ function wpdt_shorten_url( $ajaxCall ) {
 function wpdt_shorten_imgurl( $ajaxCall ) {
 	// security check
 	check_ajax_referer( 'wpdt_woelfi_nonce' );
-
-	$options = WPDashboardTwitter::dashboard_widget_options();
+	
+	$wpdt = new WPDashboardTwitter;
+	$options = $wpdt->dashboard_widget_options();
 	$img = str_replace('inc/', '', dirname( __FILE__ ) . '/uploads/') . $_POST['imgbasename'];
 	$params = array(
 		"media" => "@$img",

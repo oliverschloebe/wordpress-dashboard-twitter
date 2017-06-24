@@ -18,8 +18,6 @@ The Dashboard widget lets you update your status, send direct messages, follow y
 
 [Developer on Google+](https://plus.google.com/118074611982254715031 "Developer on Google+") | [Developer on Twitter](http://twitter.com/wpseek "Developer on Twitter")
 
-[Become A Patron, Support The Developer.](http://www.patreon.com/oliver_schloebe "Become A Patron, Support The Developer.")
-
 **Looking for more WordPress plugins? Visit [www.schloebe.de/portfolio/](https://www.schloebe.de/portfolio/)**
 
 [vimeo http://vimeo.com/5734274]
@@ -63,6 +61,9 @@ If you have suggestions please let us know by dropping us a line via e-mail or t
 4. Installation finished.
 
 == Changelog ==
+
+= 1.2.1 =
+* FIXED: Various bugfixes and improvements
 
 = 1.2.0 =
 * FIXED: Refined UI
