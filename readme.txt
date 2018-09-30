@@ -1,22 +1,22 @@
-﻿=== WordPress Dashboard Twitter ===
+﻿=== WordPress Dashboard Tweeter ===
 Contributors: Alphawolf, ratterobert
 Donate link: https://www.schloebe.de/donate/
-Tags: twitter, tweet, wordpress, dashboard, widget, bitly, wpgd, shortener, oauth, retweet, timeline
+Tags: twitter, tweet, wordpress, dashboard, widget, wpgd, oauth, retweet, timeline
 Requires at least: 2.7
 Tested up to: 4.9.999
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WordPress Dashboard Twitter represents a Dashboard Widget for WordPress, that turns your Dashboard into a Twitter Client.
+WordPress Dashboard Tweeter represents a Dashboard Widget for WordPress, that turns your Dashboard into a Twitter Client.
 
 == Description ==
 
-Twitter is everywhere. So why not in your WordPress Dashboard? WordPress Dashboard Twitter is a **Dashboard Widget** that displays Twitter @replies, sent direct messages, Retweets, Friends Timeline and favorites the convenient way within your WordPress Dashboard. WordPress Dashboard Twitter turns your Dashboard into a **Twitter client**.
+Twitter is everywhere. So why not in your WordPress Dashboard? WordPress Dashboard Tweeter is a **Dashboard Widget** that displays Twitter @replies, sent direct messages, Retweets, Friends Timeline and favorites the convenient way within your WordPress Dashboard. WordPress Dashboard Tweeter turns your Dashboard into a **Twitter client**.
 
-The Dashboard widget lets you update your status, send direct messages, follow your mentions and retweets, list direct messages, sent messages, your friends timeline and your favorites in a simple tab interface. All in a single widget. No seperate admin page needed. All the Twitter stuff you need right *where* you need it.
+The Dashboard widget lets you update your status, follow your mentions and retweets, your friends timeline and your favorites in a simple tab interface. All in a single widget. No seperate admin page needed. All the Twitter stuff you need right *where* you need it.
 
-[Developer on Google+](https://plus.google.com/118074611982254715031 "Developer on Google+") | [Developer on Twitter](http://twitter.com/wpseek "Developer on Twitter")
+[Developer on Twitter](https://twitter.com/wpseek "Developer on Twitter")
 
 **Looking for more WordPress plugins? Visit [www.schloebe.de/portfolio/](https://www.schloebe.de/portfolio/)**
 
@@ -28,12 +28,11 @@ The Dashboard widget lets you update your status, send direct messages, follow y
 
 * Twitter OAuth authentication
 * Adds a Twitter Client to your WordPress Dashboard only
-* Display Mentions, Direct Messages, Sent messages, Retweets, Timeline and Favorites in a tabbed interface
-* Reply to a Twitter status or Direct Message from within the Dashboard Widget
+* Display Mentions, Retweets, Timeline and Favorites in a tabbed interface
+* Reply to a Twitter status from within the Dashboard Widget
 * No dedicated page in your WordPress admin panel
-* All customization can be done through the Widget’s Configuration
+* All customization can be done through the widget’s configuration
 * No impact on your blog’s frontend or other backend pages
-* Shortening URLs bit.ly
 * Whenever you check your incoming links or WordPress News in the Dashboard, you can check your Twitter status as well
 
 **Included languages:**
@@ -61,6 +60,10 @@ If you have suggestions please let us know by dropping us a line via e-mail or t
 4. Installation finished.
 
 == Changelog ==
+
+= 1.3.0 =
+* FIXED: New Twitter OAuth login flow (Twitter login was broken due to Twitter API changes)
+* FIXED: Various bugfixes and improvements
 
 = 1.2.1 =
 * FIXED: Various bugfixes and improvements
@@ -197,14 +200,9 @@ If you have suggestions please let us know by dropping us a line via e-mail or t
 
 This plugins is released under the GPL, you can use it free of charge on your personal or commercial blog.
 
-= Introducing a new URL shortening service - wp.gd =
-
-WordPress Dashboard Twitter comes with its own URL Shortener Service **wp.gd**! It's not public, but you can use it in WordPress Dashboard Twitter as much as you like. If - for whatever reason - you don't like wp.gd, just switch to tr.im in the options.
-
 = Acknowledgements =
 
-* Thanks to [Justin Poliey](http://justinpoliey.com/ "Justin Poliey") for a nice Twitter Class
-* Thanks to [Timothy Groves](http://www.brandspankingnew.net/ "Timothy Groves") for the the nice Mini Icons 2 series
+* Thanks to [Abraham Williams](https://twitteroauth.com/ "Abraham Williams") for the great Twitter library
 * Thanks to all the beta testers ;-)
 
 == Screenshots ==
