@@ -3,7 +3,7 @@ Contributors: Alphawolf, ratterobert
 Donate link: https://www.schloebe.de/donate/
 Tags: twitter, tweet, wordpress, dashboard, widget, wpgd, oauth, retweet, timeline
 Requires at least: 2.7
-Tested up to: 5.2.999
+Tested up to: 5.3.9999
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -60,6 +60,9 @@ If you have suggestions please let us know by dropping us a line via e-mail or t
 4. Installation finished.
 
 == Changelog ==
+
+= 1.3.1 =
+* FIXED: WordPress 5.3 compatibility
 
 = 1.3.0 =
 * FIXED: New Twitter OAuth login flow (Twitter login was broken due to Twitter API changes)
