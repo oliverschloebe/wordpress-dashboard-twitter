@@ -1,12 +1,12 @@
-﻿=== WordPress Dashboard Tweeter ===
+=== WordPress Dashboard Tweeter ===
 Contributors: Alphawolf, ratterobert
 Donate link: https://www.schloebe.de/donate/
 Tags: twitter, tweet, wordpress, dashboard, widget, wpgd, oauth, retweet, timeline
 Requires at least: 2.7
-Tested up to: 5.3.9999
+Tested up to: 5.4.9999
 Stable tag: trunk
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 WordPress Dashboard Tweeter represents a Dashboard Widget for WordPress, that turns your Dashboard into a Twitter Client.
 
@@ -20,7 +20,7 @@ The Dashboard widget lets you update your status, follow your mentions and retwe
 
 **Looking for more WordPress plugins? Visit [www.schloebe.de/portfolio/](https://www.schloebe.de/portfolio/)**
 
-[vimeo http://vimeo.com/5734274]
+[vimeo https://vimeo.com/5734274]
 
 **Note:** The plugin requires at least WordPress 2.7 and PHP 5 in order to run. The openSSL module is mandatory, too.
 
@@ -39,12 +39,12 @@ The Dashboard widget lets you update your status, follow your mentions and retwe
 
 * English
 * German (de_DE) (Thanks to Robert Pfotenhauer ;-))
-* Italian (it_IT) (Thanks for contributing italian language goes to [Gianni Diurno](http://gidibao.net))
-* Danish (da_DK) (Thanks for contributing danish language goes to [Georg S. Adamsen](http://wordpress.blogos.dk/))
-* French (fr_FR) (Thanks for contributing french language goes to [Didier](http://www.wptrads.fr))
-* Dutch (nl_NL) (Thanks for contributing dutch language goes to [Rene](http://wpwebshop.com/premium-wordpress-plugins/))
-* Turkish (tr_TR) (Thanks for contributing turkish language goes to [Ömer Faruk Karabulut](http://stamboulbazaar.com/))
-* Swedish (sk_SK) (Thanks for contributing swedish language goes to [Branco Radenovich](http://webhostinggeeks.com/user-reviews/))
+* Italian (it_IT) (Thanks for contributing italian language goes to [Gianni Diurno](https://gidibao.net))
+* Danish (da_DK) (Thanks for contributing danish language goes to [Georg S. Adamsen](https://wordpress.blogos.dk/))
+* French (fr_FR) (Thanks for contributing french language goes to [Didier](https://www.wptrads.fr))
+* Dutch (nl_NL) (Thanks for contributing dutch language goes to [Rene](https://wpwebshop.com/premium-wordpress-plugins/))
+* Turkish (tr_TR) (Thanks for contributing turkish language goes to [Ömer Faruk Karabulut](https://stamboulbazaar.com/))
+* Swedish (sk_SK) (Thanks for contributing swedish language goes to [Branco Radenovich](https://webhostinggeeks.com/user-reviews/))
 
 == Frequently Asked Questions ==
 
@@ -187,7 +187,7 @@ If you have suggestions please let us know by dropping us a line via e-mail or t
 
 = 0.8.2 =
 * NEW: Verifying credentials on options panel
-* FIXED: issue with localization on AJAX loading (thanks for testing, [Gianni Diurno](http://gidibao.net)!)
+* FIXED: issue with localization on AJAX loading (thanks for testing, [Gianni Diurno](https://gidibao.net)!)
 * FIXED: CSS, JS, PHP code & security improvements
 
 = 0.8 =
@@ -197,7 +197,7 @@ If you have suggestions please let us know by dropping us a line via e-mail or t
 
 = Video Demo =
 
-[vimeo http://vimeo.com/5734274]
+[vimeo https://vimeo.com/5734274]
 
 = Licence =
 
