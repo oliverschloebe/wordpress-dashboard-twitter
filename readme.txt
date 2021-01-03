@@ -3,7 +3,7 @@ Contributors: Alphawolf, ratterobert
 Donate link: https://www.schloebe.de/donate/
 Tags: twitter, tweet, wordpress, dashboard, widget, wpgd, oauth, retweet, timeline
 Requires at least: 2.7
-Tested up to: 5.5.9999
+Tested up to: 5.6.9999
 Stable tag: trunk
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -45,6 +45,7 @@ The Dashboard widget lets you update your status, follow your mentions and retwe
 * Dutch (nl_NL) (Thanks for contributing dutch language goes to [Rene](https://wpwebshop.com/premium-wordpress-plugins/))
 * Turkish (tr_TR) (Thanks for contributing turkish language goes to [Ömer Faruk Karabulut](https://stamboulbazaar.com/))
 * Swedish (sk_SK) (Thanks for contributing swedish language goes to [Branco Radenovich](https://webhostinggeeks.com/user-reviews/))
+* Spanish (es_ES) (Thanks for contributing spanish translation goes to [Ibidem Group](https://www.ibidem-translations.com))
 
 == Frequently Asked Questions ==
 
