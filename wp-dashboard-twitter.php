@@ -5,7 +5,8 @@
  * @package 	WordPress_Plugins
  * @subpackage 	WPDashboardTwitter
  */
-/*
+/*
+
 Plugin Name: WordPress Dashboard Tweeter
 Version: 1.3.1
 Plugin URI: https://wordpress.org/plugins/wordpress-dashboard-twitter/
@@ -14,20 +15,25 @@ Author: Oliver Schl&ouml;be &amp; Robert Pfotenhauer
 Author URI: https://wordpress.org/extend/plugins/wordpress-dashboard-twitter/
 Text Domain: wp-dashboard-twitter
 Domain Path: /languages/
-License: GPL v3
-Copyright 2009-2019 Oliver Schl&ouml;be &amp; Robert Pfotenhauer (email : scripts@schloebe.de)
+License: GPL v3
+
+Copyright 2009-2021 Oliver Schl&ouml;be &amp; Robert Pfotenhauer (email : scripts@schloebe.de)
+
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
+(at your option) any later version.
+
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+GNU General Public License for more details.
+
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-*/
+*/
+
 // Do anything if we are in admin area only
 if ( is_admin() ) {
 	/**
