@@ -3,7 +3,7 @@ Contributors: Alphawolf, ratterobert
 Donate link: https://www.schloebe.de/donate/
 Tags: twitter, tweet, wordpress, dashboard, widget, wpgd, oauth, retweet, timeline
 Requires at least: 2.7
-Tested up to: 5.9.9999
+Tested up to: 6.9.9999
 Stable tag: trunk
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
