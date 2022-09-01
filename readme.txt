@@ -2,8 +2,9 @@
 Contributors: Alphawolf, ratterobert
 Donate link: https://www.schloebe.de/donate/
 Tags: twitter, tweet, wordpress, dashboard, widget, wpgd, oauth, retweet, timeline
-Requires at least: 2.7
-Tested up to: 6.9.9999
+Requires at least: 6.0
+Tested up to: 6.1
+Requires PHP: 8.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -22,7 +23,7 @@ The Dashboard widget lets you update your status, follow your mentions and retwe
 
 [vimeo https://vimeo.com/5734274]
 
-**Note:** The plugin requires at least WordPress 2.7 and PHP 5 in order to run. The openSSL module is mandatory, too.
+**Note:** The plugin requires at least WordPress 6.0 and PHP 8 in order to run. The openSSL module is mandatory, too.
 
 **At a glance:**
 
@@ -61,6 +62,11 @@ If you have suggestions please let us know by dropping us a line via e-mail or t
 4. Installation finished.
 
 == Changelog ==
+
+= 1.3.2 =
+* FIXED: WordPress 6.0 compatibility
+* FIXED: PHP 8.x compatibility
+* FIXED: Updated dependencies
 
 = 1.3.1 =
 * FIXED: WordPress 5.3 compatibility

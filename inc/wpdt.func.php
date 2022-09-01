@@ -21,7 +21,7 @@ function wpdt_load_replies( $ajaxCall ) {
 	// security check
 	check_ajax_referer( 'wpdt_woelfi_nonce' );
 	
-	require_once( dirname(__FILE__) . '/autoload.php');
+	require_once( dirname(__FILE__) . '/vendor/autoload.php');
 	require_once( dirname(__FILE__) . '/config.php');
 	
 	$wpdt = new WPDashboardTwitter;
@@ -76,7 +76,7 @@ function wpdt_load_timeline( $ajaxCall ) {
 	// security check
 	check_ajax_referer( 'wpdt_woelfi_nonce' );
 	
-	require_once( dirname(__FILE__) . '/autoload.php');
+	require_once( dirname(__FILE__) . '/vendor/autoload.php');
 	require_once( dirname(__FILE__) . '/config.php');
 	
 	$wpdt = new WPDashboardTwitter;
@@ -140,7 +140,7 @@ function wpdt_load_favorites( $ajaxCall ) {
 	// security check
 	check_ajax_referer( 'wpdt_woelfi_nonce' );
 	
-	require_once( dirname(__FILE__) . '/autoload.php');
+	require_once( dirname(__FILE__) . '/vendor/autoload.php');
 	require_once( dirname(__FILE__) . '/config.php');
 	
 	$wpdt = new WPDashboardTwitter;
@@ -200,7 +200,7 @@ function wpdt_load_retweets( $ajaxCall ) {
 	// security check
 	check_ajax_referer( 'wpdt_woelfi_nonce' );
 	
-	require_once( dirname(__FILE__) . '/autoload.php');
+	require_once( dirname(__FILE__) . '/vendor/autoload.php');
 	require_once( dirname(__FILE__) . '/config.php');
 	
 	$wpdt = new WPDashboardTwitter;
@@ -257,7 +257,7 @@ function wpdt_send_update( $ajaxCall ) {
 	// security check
 	check_ajax_referer( 'wpdt_woelfi_nonce' );
 	
-	require_once( dirname(__FILE__) . '/autoload.php');
+	require_once( dirname(__FILE__) . '/vendor/autoload.php');
 	require_once( dirname(__FILE__) . '/config.php');
 	
 	if( !isset($_POST['in_reply_to_statusid']) || $_POST['in_reply_to_statusid'] == '' )
