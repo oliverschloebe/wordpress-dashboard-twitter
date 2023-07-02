@@ -13,6 +13,8 @@ WordPress Dashboard Tweeter represents a Dashboard Widget for WordPress, that tu
 
 == Description ==
 
+**+++ DISCONTINUED +++** [2023/05/22]
+
 Twitter is everywhere. So why not in your WordPress Dashboard? WordPress Dashboard Tweeter is a **Dashboard Widget** that displays Twitter @replies, sent direct messages, Retweets, Friends Timeline and favorites the convenient way within your WordPress Dashboard. WordPress Dashboard Tweeter turns your Dashboard into a **Twitter client**.
 
 The Dashboard widget lets you update your status, follow your mentions and retweets, your friends timeline and your favorites in a simple tab interface. All in a single widget. No seperate admin page needed. All the Twitter stuff you need right *where* you need it.
